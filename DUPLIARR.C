@@ -1,0 +1,33 @@
+#include<stdio.h>
+
+
+#include<conio.h>
+int main(){
+  int x,a,y,b=0,ar[5],c=0;
+  clrscr();
+  for(a=0;a<5;a++){
+    printf("ARRAY[%d] = ",a);
+    scanf("%d",&ar[a]);
+
+  }
+
+  for(x=0;x<5;x++){
+    for(y=0;y<5;y++){
+      if(ar[x]==ar[y]){
+	c++;
+
+      }
+    }
+   if(c>1){
+	ar[x]=0;
+   }
+    c=0;
+  }
+//ar[b] = 0;
+  for(a=0;a<5;a++){
+    printf("ARRAY[%d] = %d ",a,ar[a]);
+
+   }
+  getch();
+  return 0;
+}

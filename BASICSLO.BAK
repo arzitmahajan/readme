@@ -1,0 +1,15 @@
+#include<stdio.h>
+#include<conio.h>
+int main(){
+  int a,j,z=1,y=2;
+  clrscr();
+ // printf("enter the number:\n");
+ // scanf("%d",&j);
+  for(a=1;a<=20;a++){
+  printf("%d\n%d\n",z,y);
+  z+=3;
+  y+=3;
+  }
+  getch();
+  return 0;
+}

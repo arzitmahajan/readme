@@ -1,0 +1,65 @@
+#include<stdio.h>
+#include<conio.h>
+struct sum{
+ int ma[3];
+
+ int phy[3];
+ int chem[3];
+ int roll[3];
+ int x;
+};
+int main(){
+ int rum = 0,stu,see=0,c=0;
+ int choice;
+ struct sum p1;
+ clrscr();
+ printf("Enter the total number of students\n");
+ scanf("%d",&stu);
+ for(p1.x=0;p1.x<stu;p1.x++){
+   printf("%d\n",p1.x);
+
+   printf("Enter your roll no.\n");
+   scanf("%d",&p1.roll[p1.x]);
+
+   printf("Enter your marks in Matsh\n");
+   scanf("%d",&p1.ma[p1.x]);
+
+   printf("Enter your marks in Physics\n");
+   scanf("%d",&p1.phy[p1.x]);
+
+   printf("Enter your marks in Chemistry\n");
+   scanf("%d",&p1.chem[p1.x]);
+
+   rum= p1.ma[p1.x]+p1.phy[p1.x]+p1.chem[p1.x];
+   printf("Sum = %d\n",rum);
+ }
+ printf("ENTER 1 TO  FIND SPECIFIC ROLL NO.\nENTER 2 TO VIEW ALL DATA\n");
+ scanf("%d",&choice);
+  switch(choice){
+   case 1:
+     printf("Enter the Rollno. for which you want to find data\n");
+     scanf("%d",&see);
+     p1.x=0;
+     for(p1.x=0;p1.x<stu;p1.x++){
+     if(p1.roll[p1.x]==see){
+     printf("Marks in maths = %d\n",p1.ma[p1.x]);
+     printf("Marks in physics = %d\n",p1.phy[p1.x]);
+     printf("Marks in chemistry = %d\n",p1.chem[p1.x]);
+     c++;
+    }
+   }
+   if(c==0){
+   printf("NOT FOUND!!");
+   break;
+   }
+  case 2:
+     for(p1.x=0;p1.x<stu;p1.x++){
+      printf("Marks in maths = %d\n",p1.ma[p1.x]);
+      printf("Marks in physics = %d\n",p1.phy[p1.x]);
+      printf("Marks in chemistry = %d\n",p1.chem[p1.x]);
+     }
+     break;
+ }
+ getch();
+ return 0;
+}

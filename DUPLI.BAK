@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include<conio.h>
+int main(){
+  int x,y,arr[5],c=0 ;
+  clrscr();
+  printf("Enter the values of array \n");
+  for(x=0;x<5;x++){
+    printf("ARRAY[%d] = ",x);
+    printf("\n");
+    scanf("%d",&arr[x]);
+  }
+  for(x=0;x<5;x++){
+     for(y=0;y<5;y++){
+       if(arr[x]==arr[y]){
+	 c++;
+	 arr[x]=0;
+	 printf("DUPLICATION\n");
+       }
+     }
+     c=0;
+  for(x=0;x<5;x++){
+    printf("ARRAY[%d] = %d",arr[x]);
+
+  }
+  }
+
+  getch();
+  return 0;
+}

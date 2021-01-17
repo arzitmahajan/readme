@@ -1,0 +1,15 @@
+#include<stdio.h>
+#include<conio.h>
+int main(){
+   int x,y,z;
+   clrscr();
+  // for(x=1;x<=8;x++){
+   for(z=4;z>=x;z--){
+   for(y=1;y<=x;y++){
+  // printf(" ");}
+   printf("*");}
+   printf("\n");}
+
+   getch();
+   return 0;
+}
